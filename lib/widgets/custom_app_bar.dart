@@ -5,13 +5,16 @@ class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      title: Text("Notes",style: TextStyle(
-        fontSize: 28,
-      ),),
-      actions: [
-       CustomSearchIcon(),
+    return Row(
+      children: [
+        Text("Notes",style: TextStyle(
+          color: Colors.white,
+          fontSize: 28
+        ),),
+        Spacer(),
+        CustomSearchIcon(),
       ],
+      
     );
   }
 }
