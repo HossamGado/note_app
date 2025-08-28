@@ -5,7 +5,7 @@ import 'package:note_app/cubits/add_note_cubit/add_note_states.dart';
 import 'package:note_app/models/note_model.dart';
 
 class AddNoteCubit extends Cubit<NotesStates>{
-  AddNoteCubit(super.initialState);
+  AddNoteCubit():super(AddNoteInitState());
 
   addNote(NoteModel note)async{
     emit(AddNoteLoadingState());
