@@ -4,8 +4,6 @@ import 'package:note_app/widgets/note_view_body.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
-  static const String routeName="Note View";
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
