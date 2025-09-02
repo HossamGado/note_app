@@ -4,6 +4,7 @@ import 'package:note_app/views/edit_note_view.dart';
 class NoteItem extends StatelessWidget {
   const NoteItem({super.key, required this.note});
   final NoteModel note;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -40,7 +41,9 @@ class NoteItem extends StatelessWidget {
                 ),
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: (){
+                  note.delete();
+                },
                 icon: const Icon(Icons.delete, size: 35),
               ),
             ),
