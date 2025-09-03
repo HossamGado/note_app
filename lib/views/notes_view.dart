@@ -9,29 +9,27 @@ class NotesView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => NotesCubit(),
-      child: Scaffold(
-        floatingActionButton: FloatingActionButton(
-            backgroundColor: Colors.cyanAccent,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(50),
-            ),
-            child: Icon(Icons.add, color: Colors.black,),
-            onPressed: () {
-              showModalBottomSheet(
-                  isDismissible: false,
-                  isScrollControlled: true,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  context: context,
-                  builder: (context) {
-                    return AddNoteButtonSheet();
-                  });
-            }),
-        body: NoteViewBody(),
-      ),
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.cyanAccent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50),
+          ),
+          child: Icon(Icons.add, color: Colors.black,),
+          onPressed: () {
+            showModalBottomSheet(
+
+                isDismissible: false,
+                isScrollControlled: true,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                context: context,
+                builder: (context) {
+                  return AddNoteButtonSheet();
+                });
+          }),
+      body: NoteViewBody(),
     );
   }
 }
